@@ -1,8 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import ScrumyGoals
 
 
-def get_grading_parameters(request):
-    return HttpResponse("Welcome to Django")
+def index(request):
+    return HttpResponse(ScrumyGoals.objects.filter(goals_name="Learn Django"))
 
-# Create your views here.
+def move_goal(request, goal_id):
+    goal = ScrumyGoals.objects.get(goals_id=goal_id)
+    return HttpResponse(goal.goals_name)
+
+
+
+#Create your views here.

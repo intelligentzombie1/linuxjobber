@@ -1,0 +1,15 @@
+MANIFEST.in
+README.rst
+setup.py
+Django_kayodescrumy.egg-info/PKG-INFO
+Django_kayodescrumy.egg-info/SOURCES.txt
+Django_kayodescrumy.egg-info/dependency_links.txt
+Django_kayodescrumy.egg-info/top_level.txt
+kayodescrumy/__init__.py
+kayodescrumy/admin.py
+kayodescrumy/apps.py
+kayodescrumy/models.py
+kayodescrumy/tests.py
+kayodescrumy/urls.py
+kayodescrumy/views.py
+kayodescrumy/migrations/__init__.py

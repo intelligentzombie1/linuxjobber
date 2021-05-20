@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-&ke#geo9+0^m_5o_unt+g-m743bgoe5l6+m!ihy1sfzxu)1&yo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [52.234.46.212]
+ALLOWED_HOSTS = ['52.234.46.212', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'kayodescrumy.apps.KayodescrumyConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
