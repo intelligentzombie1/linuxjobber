@@ -4,11 +4,11 @@ from .models import ScrumyGoals
 
 
 def index(request):
-    return HttpResponse(ScrumyGoals.objects.filter(goals_name="Learn Django"))
+    return HttpResponse(ScrumyGoals.objects.filter(goal_name="Learn Django"))
 
 def move_goal(request, goal_id):
-    goal = ScrumyGoals.objects.get(goals_id=goal_id)
-    return HttpResponse(goal.goals_name)
+    goal = ScrumyGoals.objects.get(goal_id=goal_id)
+    return HttpResponse(goal.goal_name)
 
 
 

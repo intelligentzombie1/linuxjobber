@@ -11,16 +11,16 @@ class GoalStatus(models.Model):
 
 
 class ScrumyGoals(models.Model):
-    goals_name = models.TextField()
-    goals_id = models.IntegerField()
-    goals_status = models.ForeignKey(GoalStatus, on_delete=models.PROTECT)
+    goal_name = models.TextField()
+    goal_id = models.IntegerField()
+    goal_status = models.ForeignKey(GoalStatus, on_delete=models.PROTECT)
     created_by = models.TextField()
     moved_by = models.TextField()
     owner = models.TextField()
     user = models.ForeignKey(User, related_name='user', on_delete=models.PROTECT)
 
     def __str__(self):
-        return self.goals_name
+        return self.goal_name
 
 class ScrumyHistory(models.Model):
     created_by = models.TextField()
