@@ -19,8 +19,8 @@ class ScrumyGoals(models.Model):
 
 
 class ScrumyHistory(models.Model):
-    created_by = models.CharField(max_length=300)
     moved_by = models.CharField(max_length=300)
+    created_by = models.CharField(max_length=300)
     moved_from = models.CharField(max_length=300)
     moved_to = models.CharField(max_length=300)
     time_of_action = models.TimeField()
