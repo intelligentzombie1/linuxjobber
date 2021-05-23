@@ -2,5 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='blog-home'),
+    path('', views.get_grading_parameters, name='blog-home'),
 ]
+

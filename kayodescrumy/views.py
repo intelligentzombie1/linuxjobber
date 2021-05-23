@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import ScrumyGoals
 
 
-def index(request):
+def get_grading_parameters(request):
     return HttpResponse("This is a Scrum Application")
+
 
 
 
