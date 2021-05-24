@@ -22,12 +22,12 @@ class ScrumyGoals(models.Model):
 
 
 class ScrumyHistory(models.Model):
-    moved_by = models.TextField()
     created_by = models.TextField()
+    moved_by = models.TextField()
     moved_from = models.TextField()
     moved_to = models.TextField()
     time_of_action = models.TextField()
     goal = models.ForeignKey(ScrumyGoals, on_delete=models.PROTECT)
 
     def __str__(self):
-        return self.crea
+        return self.created_by
