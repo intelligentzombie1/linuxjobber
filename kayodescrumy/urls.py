@@ -4,5 +4,6 @@ from . import views
 urlpatterns = [
     path('', views.get_grading_parameters, name='kayodescrumy/'),
     path('movegoal/<int:goal_id>/', views.move_goal, name='move_goal'),
-    path('addgoal/<int:goal_id>/', views.move_goal, name='move_goal'),
+    path('addgoal/', views.add_goal, name='addgoal'),
+    path('home/', views.home, name='home'),
 ]

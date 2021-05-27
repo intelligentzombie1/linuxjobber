@@ -15,16 +15,19 @@ def move_goal(request, goal_id):
     return HttpResponse(goal.goal_name)
 
 
-def add_goal(request, ):
-    users = User.objects.get(username='LouisOma')
-    goal_status = GoalStatus.objects.get(status_name='Weekly Goal')
-    ids = random.randint(1000, 9999)
-    ScrumyGoals.objects.create(goal_name='Keep Learning Django', goal_id=ids,
-                               created_by='Louis', moved_by='Louis', owner='Louis',
-                               goal_status=goal_status, user=users),
+def add_goal(request):
+    ScrumyGoals.objects.create(
+        user=User.objects.get(username='LouisOma'),
+        goal_name='Keep Learning Django',
+        goal_id= random.randint(1000,9999),
+        created_by = 'Louis',
+        moved_by='Louis',
+        owner='Louis',
+        goal_status=GoalStatus.objects.get(status_name='Weekly Goal')
+    )
 
 
-def home(request,):
+def home(request):
     display = ScrumyGoals.objects.filter(goal_name='Keep Learning Django')
-    output = ', '.join([eachgoal.goal_name for eachgoal in display])
+    output = ', '.join([q.goal_name for q in display])
     return HttpResponse(output)
