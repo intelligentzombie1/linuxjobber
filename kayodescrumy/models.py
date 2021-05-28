@@ -22,6 +22,9 @@ class ScrumyGoals(models.Model):
     def __str__(self):
         return self.goal_name
 
+    def _int_(self):
+        return self.goal_id
+
 
 class ScrumyHistory(models.Model):
     moved_by = models.TextField()
